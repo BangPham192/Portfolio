@@ -9,18 +9,19 @@ interface PortfolioItemProps {
   title: string;
   category: string;
   image: string;
+  url?: string;
 }
 
 const portfolioItems = [
-  { title: 'Web Design', category: 'Web Development', image: webImage },
-  { title: 'Mobile App', category: 'Mobile Development', image: mobileImage },
-  { title: 'E-Commerce', category: 'Web Development', image: onlineShoppingImage },
-  { title: 'Business Website', category: 'Web Design', image: landingPageImage },
-  { title: 'Dashboard UI', category: 'UI/UX Design', image: dashboardImage },
-  { title: 'Portfolio Site', category: 'Web Development', image: portfolioImage }
+  { title: 'Web Design', category: 'Web Development', image: webImage, url: 'https://portal.paypense.com' },
+  { title: 'Mobile App', category: 'Mobile Development', image: mobileImage, url: "#" },
+  { title: 'E-Commerce', category: 'Web Development', image: onlineShoppingImage, url: "#" },
+  { title: 'Business Website', category: 'Web Design', image: landingPageImage, url: "#" },
+  { title: 'Dashboard UI', category: 'UI/UX Design', image: dashboardImage, url: "#" },
+  { title: 'Portfolio Site', category: 'Web Development', image: portfolioImage, url: "#" }
 ];
 
-const PortfolioItem = ({ title, category, image }: PortfolioItemProps) => (
+const PortfolioItem = ({ title, category, image, url }: PortfolioItemProps) => (
   <div className="group relative overflow-hidden rounded-lg shadow-lg">
     <img
       src={image}
@@ -30,7 +31,7 @@ const PortfolioItem = ({ title, category, image }: PortfolioItemProps) => (
     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
       <h3 className="text-xl font-bold mb-2 text-white">{title}</h3>
       <p className="mb-4 text-gray-200">{category}</p>
-      <a href="#" className="inline-block px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">View Details</a>
+      <a href={url} className="inline-block px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">View Details</a>
     </div>
   </div>
 );
