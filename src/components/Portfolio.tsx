@@ -1,21 +1,29 @@
+import webImage from '../assets/web.jpg';
+import mobileImage from '../assets/mobile.jpg';
+import onlineShoppingImage from '../assets/online_shopping_2.jpg';
+import landingPageImage from '../assets/business website.jpg';
+import portfolioImage from '../assets/portfolio.jpg';
+import dashboardImage from '../assets/dash board.jpg';
+
 interface PortfolioItemProps {
   title: string;
   category: string;
+  image: string;
 }
 
 const portfolioItems = [
-  { title: 'Web Design', category: 'Web Development' },
-  { title: 'Mobile App', category: 'Mobile Development' },
-  { title: 'E-Commerce', category: 'Web Development' },
-  { title: 'Business Website', category: 'Web Design' },
-  { title: 'Dashboard UI', category: 'UI/UX Design' },
-  { title: 'Portfolio Site', category: 'Web Development' }
+  { title: 'Web Design', category: 'Web Development', image: webImage },
+  { title: 'Mobile App', category: 'Mobile Development', image: mobileImage },
+  { title: 'E-Commerce', category: 'Web Development', image: onlineShoppingImage },
+  { title: 'Business Website', category: 'Web Design', image: landingPageImage },
+  { title: 'Dashboard UI', category: 'UI/UX Design', image: dashboardImage },
+  { title: 'Portfolio Site', category: 'Web Development', image: portfolioImage }
 ];
 
-const PortfolioItem = ({ title, category }: PortfolioItemProps) => (
+const PortfolioItem = ({ title, category, image }: PortfolioItemProps) => (
   <div className="group relative overflow-hidden rounded-lg shadow-lg">
     <img
-      src={`https://source.unsplash.com/400x300/?${title.toLowerCase().replace(' ', '-')}`}
+      src={image}
       alt={title}
       className="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-110"
     />

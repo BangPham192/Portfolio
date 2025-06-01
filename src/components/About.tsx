@@ -33,17 +33,6 @@ const InfoItem = ({ label, value }: InfoItemProps) => (
 );
 
 export const About = () => {
-  const personalInfo = [
-    { label: "Birthday", value: "1 Jan 1990" },
-    { label: "Website", value: "www.example.com" },
-    { label: "Phone", value: "+123 456 7890" },
-    { label: "City", value: "New York, USA" },
-    { label: "Age", value: "33" },
-    { label: "Degree", value: "Master" },
-    { label: "Email", value: "john@example.com" },
-    { label: "Freelance", value: "Available" }
-  ];
-
   const skills = [
     { name: "Java", percentage: 90 },
     { name: "Spring boot", percentage: 90 },

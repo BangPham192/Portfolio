@@ -3,12 +3,15 @@ import { Icons } from './shared/icons';
 
 interface ContactInfoProps {
   icon: keyof typeof Icons;
-  label: string;
   value: string;
   href: string;
 }
 
-const ContactInfo: React.FC<ContactInfoProps> = ({ icon, label, value, href }) => {
+const ContactInfo: React.FC<ContactInfoProps> = ({
+  icon,
+  value,
+  href
+}: ContactInfoProps) => {
   const Icon = Icons[icon];
   return (
     <a 
@@ -28,13 +31,11 @@ const ContactInfo: React.FC<ContactInfoProps> = ({ icon, label, value, href }) =
 const contactDetails: ContactInfoProps[] = [
   {
     icon: 'Email',
-    label: 'Email',
     value: 'phamxuanbang2805@gmail.com',
     href: 'mailto:phamxuanbang2805@gmail.com'
   },
   {
     icon: 'LinkedIn',
-    label: 'LinkedIn',
     value: 'linkedin.com/in/bang-pham-7823281b4',
     href: 'https://www.linkedin.com/in/bang-pham-7823281b4'
   }
@@ -46,7 +47,11 @@ interface InputFieldProps {
   rows?: number;
 }
 
-const InputField: React.FC<InputFieldProps> = ({ type, placeholder, rows }) => {
+const InputField: React.FC<InputFieldProps> = ({
+  type,
+  placeholder,
+  rows
+}: InputFieldProps) => {
   if (type === 'textarea') {
     return (
       <textarea 
