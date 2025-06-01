@@ -31,7 +31,7 @@ const PortfolioItem = ({ title, category, image, url }: PortfolioItemProps) => (
     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
       <h3 className="text-xl font-bold mb-2 text-white">{title}</h3>
       <p className="mb-4 text-gray-200">{category}</p>
-      <a href={url} className="inline-block px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">View Details</a>
+      <a href={url} target='blank' className="inline-block px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">View Details</a>
     </div>
   </div>
 );
