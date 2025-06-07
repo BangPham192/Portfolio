@@ -8,7 +8,7 @@ export const Hero: React.FC = () => {
           I am Bang Pham
         </h1>
         <p className="text-2xl md:text-3xl mb-8 animate-up">
-          Web Developer
+          Web Developer test
         </p>
         {/* <div className="flex justify-center space-x-6 text-3xl">
           {socialLinks.map((link, index) => (
